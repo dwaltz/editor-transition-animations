@@ -4,9 +4,16 @@ $(function(){
 	var $newPanel   = $('.new-panel');
 	var $newFooter  = $('.new-footer');
 	var $catContent = $('.cat-content');
+	var $BC         = $('.breadcrumb');
+	var $SB         = $('.save-btn');
+	var $ttl        = $('.header-title');
 
 	$switch.on('mousedown', function(ev){
 		var $currentTarget = $(ev.currentTarget);
+
+		$BC.show();
+		$SB.show();
+		$ttl.hide();
 
 		$switch.removeClass('active');
 		$catContent.removeClass('fade-out');
@@ -19,6 +26,9 @@ $(function(){
 		switch( $currentTarget.data('type') )
 		{
 			case 1:
+				$BC.fadeOut();
+				$SB.fadeOut();
+				$ttl.fadeIn();
 				$secHeader.addClass('open-1-pos');
 				$newPanel.addClass('open-1-pos');
 				$newFooter.addClass('open-1-pos');
@@ -30,6 +40,9 @@ $(function(){
 				},0);
 				break;
 			case 2:
+				$BC.fadeOut();
+				$SB.fadeOut();
+				$ttl.fadeIn();
 				$secHeader.addClass('open-2-pos');
 				$newPanel.addClass('open-2-pos');
 				$newFooter.addClass('open-2-pos');
@@ -41,6 +54,9 @@ $(function(){
 				},0);
 				break;
 			case 3:
+				$BC.fadeOut();
+				$SB.fadeOut();
+				$ttl.fadeIn();
 				setTimeout(function(){
 					$secHeader.addClass('open-3');
 					$newPanel.addClass('open-3');
@@ -49,6 +65,9 @@ $(function(){
 				},0);
 				break;
 			case 4:
+				$BC.fadeOut();
+				$SB.fadeOut();
+				$ttl.fadeIn();
 				setTimeout(function(){
 					$secHeader.addClass('open-4');
 					$newPanel.addClass('open-4');
